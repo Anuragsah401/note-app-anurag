@@ -1,6 +1,6 @@
 <div
   *ngIf="isLoggingLoading"
-  class="h-screen grid w-full place-items-center items-center "
+  class="h-screen grid w-full place-items-center items-center"
 >
   <div
     class="animate-spin rounded-full h-5 w-5 border-b-2 border-blue-500 mx-auto"
@@ -11,10 +11,9 @@
   *ngIf="!isLoggedIn && !isLoggingLoading"
   class="h-screen grid w-full place-items-center items-center bg-[#F4E8CF]"
 >
-
   <h1 class="text-4xl">Hi Welcome Back!</h1>
 
-  <img class="w-96" src="./assets/note-img.jpg" alt="">
+  <img class="w-96" src="./assets/note-img.jpg" alt="" />
 
   <div class="mx-auto">
     <button
@@ -30,15 +29,20 @@
   </div>
 </div>
 
-<div *ngIf="isLoggedIn && !isLoggingLoading" class="md:w-[60%] mx-auto">
-  <div class="flex h-screen flex-col sm:flex-row">
-    <app-header
-      [profile]="profile"
-      (clearProfile)="clearProfile()"
-    ></app-header>
+<div class="bg-slate-400 h-[100vh]">
+  <div
+    *ngIf="isLoggedIn && !isLoggingLoading"
+    class="md:w-[80%] mx-auto "
+  >
+    <div class="">
+      <app-header
+        [profile]="profile"
+        (clearProfile)="clearProfile()"
+      ></app-header>
 
-    <main class="flex-1 md:ml-[100px]">
-      <router-outlet></router-outlet>
-    </main>
+      <main class="">
+        <router-outlet></router-outlet>
+      </main>
+    </div>
   </div>
 </div>

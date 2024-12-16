@@ -5,6 +5,7 @@ import { environment } from '../../../environmet';
 @Injectable({
   providedIn: 'root',
 })
+
 export class NoteService {
   constructor(private httpClient: HttpClient) {}
 
@@ -25,6 +26,7 @@ export class NoteService {
       withCredentials: true,
     });
   }
+  
   updateNote(id: string, note: { title: string; content: string }) {
     return this.httpClient.put(`${environment.BACKEND_URL}/notes/${id}`, note, {
       withCredentials: true,

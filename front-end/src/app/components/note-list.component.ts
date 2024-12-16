@@ -1,7 +1,7 @@
 import { Component, NgModule } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { NoteService } from '../services/note.service';
-import { NgFor, SlicePipe } from '@angular/common';
+import { NgFor, SlicePipe, NgIf } from '@angular/common';
 import {
   FormControl,
   FormsModule,
@@ -20,8 +20,9 @@ interface Note {
   selector: 'note-list',
   templateUrl: './note-list.html',
   standalone: true,
-  imports: [RouterOutlet, RouterLink, NgFor, SlicePipe, ReactiveFormsModule],
+  imports: [RouterOutlet, RouterLink, NgFor, SlicePipe, ReactiveFormsModule, NgIf],
 })
+
 export class NoteListComponent {
   notes: Note[] = [];
   noteList: Note[] = [];
@@ -51,7 +52,6 @@ export class NoteListComponent {
   }
 
   filterNotes(title: string) {
-    console.log(title);
     if (!title) {
       return this.notes;
     }

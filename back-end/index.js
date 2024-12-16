@@ -29,16 +29,13 @@ app.use(
       name: "my_session_cookie",
       httpOnly: true,
       secure: process.env.NODE_ENV === "production",
-      maxAge: 24 * 60 * 60 * 1000,
+      maxAge: 60 * 60 * 1000,
     },
   })
 );
 app.use(passport.initialize());
 app.use(passport.session());
 
-// app.use("/", (req, res, next) => {
-//   res.send("Hello World!");
-// });
 
 app.use("/check-auth", auth, (req, res) => {
   res.status(200).json({ message: "You are authenticated" });
@@ -58,5 +55,5 @@ app.use("/me", auth, async (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`);
+  console.log(`This app is listening on port ${port}`);
 });
