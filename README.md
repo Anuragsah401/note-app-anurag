@@ -15,18 +15,17 @@ Welcome to the **Note Taking App** – an intuitive, user-friendly application d
 
 ## 📸 Screenshots
 
-<!-- ### Light Mode
-![Light Mode Screenshot](screenshots/light-mode.png)
-
-### Dark Mode
-![Dark Mode Screenshot](screenshots/dark-mode.png) -->
+![Front Page](screenshots/sc1.png)
+![Home Page](screenshots/sc2.png)
+![Create Note Page](screenshots/sc3.png)
+![Note Added](screenshots/sc4.png)
 
 
 ---
 
 ## 🛠️ Tech Stack
 
-- **Frontend**: React.js, TailwindCSS
+- **Frontend**: Angular.js, TailwindCSS
 - **Backend**: Node.js, Express.js
 - **Database**: MongoDB
 - **Authentication**: JWT-based authentication
@@ -45,12 +44,12 @@ Make sure you have the following installed:
 ### Steps
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/note-taking-app.git
+   git clone https://github.com/Anuragsah401/note-app-anurag
    ```
 
 2. Navigate to the project directory:
    ```bash
-   cd note-taking-app
+   cd note-taking-anurag
    ```
 
 3. Install dependencies:
@@ -62,7 +61,7 @@ Make sure you have the following installed:
 
 4. Set up environment variables by creating a `.env` file:
    ```env
-   PORT=5000
+   PORT=3000
    MONGO_URI=your-mongodb-uri
    JWT_SECRET=your-secret-key
    ```
@@ -74,7 +73,7 @@ Make sure you have the following installed:
    yarn dev
    ```
 
-6. Open your browser and visit `http://localhost:5000`.
+6. Open your browser and visit `http://localhost:4200`.
 
 ---
 
@@ -100,13 +99,13 @@ Contributions are welcome! Follow these steps:
 
 ## 🛡️ License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+This project is not licensed 
 
 ---
 
 ## 🙌 Acknowledgments
 
-- Inspired by [Evernote](https://evernote.com) and [Notion](https://notion.so).
+- Simple note taking app for coursework
 - Thanks to the open-source community for libraries and tools.
 
 ---

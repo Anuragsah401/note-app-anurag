@@ -13,6 +13,8 @@
 >
   <h1 class="text-4xl">Hi Welcome Back!</h1>
 
+  <p class="text-xl">Note taking app</p>
+
   <img class="w-96" src="./assets/note-img.jpg" alt="" />
 
   <div class="mx-auto">
@@ -23,17 +25,10 @@
       Login with Github
     </button>
   </div>
-  <div class="text-center">
-    <img class="w-10 mx-auto" src="./assets/note.png" alt="" />
-    <p class="text-[10px]">Note taking app</p>
-  </div>
 </div>
 
 <div class="bg-slate-400 h-[100vh]">
-  <div
-    *ngIf="isLoggedIn && !isLoggingLoading"
-    class="md:w-[80%] mx-auto "
-  >
+  <div *ngIf="isLoggedIn && !isLoggingLoading" class="md:w-[80%] mx-auto">
     <div class="">
       <app-header
         [profile]="profile"

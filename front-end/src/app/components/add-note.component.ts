@@ -21,6 +21,7 @@ interface Note {
   imports: [RouterOutlet, NgIf, AngularEditorModule, ReactiveFormsModule],
   templateUrl: './form.component.html',
 })
+
 export class AddNoteComponent implements OnInit {
   title = '';
   content = '';
